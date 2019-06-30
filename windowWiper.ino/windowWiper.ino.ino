@@ -80,9 +80,10 @@ void loop() {
   
   Serial.print(pos);
   Serial.println();
-  digitalRead(stopSignal);
+  digital815Read(stopSignal);
 
   if(pos == defaultPos && stopSignal == true){
+    delay(15);
     digitalWrite(wiperStopped, HIGH);
     while(true){}
   }
